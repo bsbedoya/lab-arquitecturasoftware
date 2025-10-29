@@ -1,0 +1,126 @@
+.informacion-container {
+  width: 80%;
+  margin: 20px auto; 
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #fff; 
+}
+
+
+h1 {
+  justify-content: center;    
+  align-items: center;    
+  height: auto;        
+  text-align: center; 
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  position: relative;
+  padding-bottom: 10px;
+  background-image: linear-gradient(45deg, #9b59b6, #2980b9, #2ecc71);  
+  color: transparent;
+  background-clip: text;
+  animation: glow 2.0s infinite alternate; 
+}
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+                   0 0 10px rgba(255, 255, 255, 0.4),
+                   0 0 15px rgba(255, 255, 255, 0.5),
+                   0 0 20px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                   0 0 20px rgba(255, 255, 255, 0.6),
+                   0 0 30px rgba(255, 255, 255, 0.7),
+                   0 0 40px rgba(255, 255, 255, 0.8);
+  }
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.2); 
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  margin: 20px 20px 20px -10px; 
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #fff; 
+}
+
+
+.texto {
+  flex: 1;
+  padding-right: 20px;
+  max-width: 60%;
+}
+
+section {
+  margin-bottom: 50px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.4); 
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+.imagenes {
+  margin: 20px; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 30%; 
+  height: 1500px;
+}
+
+
+.imagenes img {
+  margin: -15px 20px 28px 80px;
+  width: 400%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.color-buttom {
+  background-color: #131314; /* Color oscuro, similar al espacio */
+  color: #fff; /* Texto blanco para un buen contraste */
+  border: 2px solid #fff; /* Borde blanco, como una estrella distante */
+  padding: 12px 24px; /* Relleno adecuado para el botón */
+  font-size: 16px; /* Tamaño de texto adecuado */
+  border-radius: 25px; /* Bordes redondeados para un toque suave */
+  position: relative; /* Necesario para efectos de fondo */
+  text-transform: uppercase; /* Letras en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  font-weight: bold; /* Texto en negrita para hacerlo más visible */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.3); /* Efecto de brillo, como estrellas */
+  transition: all 0.3s ease; /* Suavizar la transición en hover */
+}
+
+.color-buttom:hover {
+  background-color: #9191ab; /* Ligero cambio en el fondo al hacer hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8); /* Aumenta el brillo en hover */
+}
+
+

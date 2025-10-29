@@ -1,0 +1,60 @@
+<div class="card bg-dark text-white">
+    <div class="card-header">
+        {{titulo}}
+    </div>
+    <div class="card-body">
+            <form>
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Nombre del planeta:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="rocosos2.nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras" required oninput="this.value=this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g,'')">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="diametro" class="col-form-label col-sm-2">Diametro:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="rocosos2.diametro" name="diametro" pattern="[0-9]+" title="Solo números" required oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="distancia_sol" class="col-form-label col-sm-2">Distancia al sol:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="rocosos2.distancia_sol" name="distancia_sol" pattern="[0-9]+" title="Solo números" required oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="lunas" class="col-form-label col-sm-2">Lunas:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="rocosos2.lunas" name="lunas" pattern="[0-9]+" title="Solo números" required oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="tipo" class="col-form-label col-sm-2">Tipo:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="tipo" [(ngModel)]="rocosos2.tipo" readonly [value]="'Gaseoso'">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="url" class="col-form-label col-sm-2">Imagen:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="rocosos2.url" name="url" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras" required oninput="this.value=this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g,'')">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-primary" role="button" (click)='create()' *ngIf="!rocosos2.id else ChicoBlackPick">
+                            Crear
+                        </button>
+
+                        <ng-template #ChicoBlackPick>
+                            <button type="button" class="btn btn-primary" role="button" (click)='update()'>
+                                Editar
+                            </button>
+                        </ng-template>
+
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="d-flex justify-content-center align-items-center p-4 custom-collapse">
+    <!-- Título como enlace de texto sin subrayado -->
+    <span class="text-link" [routerLink]="['/universo']" routerLinkActive="active">{{ titulo }}</span>
+
+    <!-- Botones con rutas -->
+    <button class="color-buttom btn ms-3" [routerLink]="['/via lactea']" routerLinkActive="active">
+      Via Lactea
+    </button>
+    <button class="color-buttom btn ms-3" [routerLink]="['/andromeda']" routerLinkActive="active">
+      Andromeda
+    </button>
+    <button class="color-buttom btn ms-3" [routerLink]="['/galaxia triangulo']" routerLinkActive="active">
+      Galaxia del Triangulo
+    </button>
+  </div>
+</div>
+
+<nav class="navbar navbar-dark bg-transparent">
+  <div class="container-fluid d-flex justify-content-start">
+    <!-- Botón navbar-toggler a la izquierda -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>

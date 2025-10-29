@@ -1,0 +1,105 @@
+.navbar {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+/* Este contenedor está alineado a la izquierda con justify-content-start */
+.container-fluid.d-flex {
+  justify-content: start !important;
+}
+
+.custom-collapse {
+  background-color: transparent !important;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center !important; /* mantiene centrado el contenido desplegado */
+  align-items: center;
+}
+
+.text-link {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: transparent;
+  background-image: linear-gradient(45deg, #00c3ff, #ffff1c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+  animation: glow 2s infinite alternate;
+  user-select: none;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(255, 255, 255, 0.4),
+      0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(255, 255, 255, 0.7),
+      0 0 30px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.color-buttom {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff !important;
+  border: 2px solid #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 30px rgba(0, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  animation: button-glow 2s ease-in-out infinite alternate;
+  user-select: none;
+}
+
+.color-buttom:hover {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  box-shadow:
+    0 0 25px rgba(255, 255, 255, 1),
+    0 0 40px rgba(0, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+@keyframes button-glow {
+  0% {
+    box-shadow:
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(0, 255, 255, 0.3),
+      0 0 30px rgba(0, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 30px rgba(0, 255, 255, 0.6),
+      0 0 40px rgba(0, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-collapse {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .color-buttom {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .text-link {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+}

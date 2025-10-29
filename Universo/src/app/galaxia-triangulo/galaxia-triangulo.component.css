@@ -1,0 +1,90 @@
+h4{
+    font-weight: bold;
+  }
+  
+  h4{
+    color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.2); 
+  }
+  h2 {
+    color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.2); 
+  }
+  
+  h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* Contenedor principal para alinear texto y collapse */
+  .contenido {
+    display: flex;
+    justify-content: space-between; /* Texto a la izquierda, collapse a la derecha */
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+  
+  /* Ajuste del texto */
+  .texto {
+    max-width: 40%;
+    padding-right: 20px;
+  }
+  
+  section {
+    margin-bottom: 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Ajuste del carrusel para hacerlo más ancho */
+  #carouselExampleIndicators1 {
+    width: 50%; /* Tamaño fijo para el carrusel */
+    max-width: 1400px;
+    margin-top: 30px;
+    min-height: 10px;
+    margin-left: auto; /* Alineado a la izquierda */
+    margin-right: 0; /* Deja margen automático en la derecha */
+    border-radius: 10px;
+    overflow: hidden;  
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* Asegura que los elementos dentro no cambien de posición */
+  }
+  
+  #carouselExampleIndicators2 {
+    width: 50%; /* Tamaño fijo para el carrusel */
+    max-width: 1400px;
+    margin-top: 110px;
+    margin-left: auto; /* Alineado a la izquierda */
+    margin-right: 0; /* Deja margen automático en la derecha */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* Asegura que los elementos dentro no cambien de posición */
+  }
+  
+  /* Asegurarse que las imágenes del carrusel tengan un tamaño constante */
+  .carousel-item {
+    height: 500px; /* Mantener una altura fija para todos los elementos */
+  }
+  
+  .carousel-item img {
+    width: 100%; /* Las imágenes siempre ocuparán el 100% del ancho del carrusel */
+    height: 100%; /* Mantener una altura constante */
+    object-fit: cover; /* Las imágenes cubrirán completamente el área sin deformarse */
+  }
+  
+  

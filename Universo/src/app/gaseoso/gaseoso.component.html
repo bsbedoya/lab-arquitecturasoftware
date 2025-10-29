@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="card" *ngFor="let planetas of gaseosos1">
+    <div class="face face1">
+      <div class="card-image">
+        <img src="{{planetas.url}}" alt="Imagen 1">
+      </div>
+      <div class="content">
+         <i class="fab fa-windows"></i>            
+        <h1>{{planetas.nombre}}</h1>
+      </div>
+    </div>
+    <div class="face face2">
+      <div class="content">
+        <p> Lunas: {{planetas.lunas}}</p>
+        <p> Tipo: {{planetas.tipo}}</p>
+        <p> Distancia al Sol: {{planetas.distancia_sol}}</p>
+        <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/gaseosos/form']">Crear Planeta</button>
+        <button type="button" name="editar" [routerLink]="['/gaseosos/form', planetas.id]" class="btn btn-primary">Editar</button>
+        <button type="button" name="eliminar" (click)="delete(planetas)" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

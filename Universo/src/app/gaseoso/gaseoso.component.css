@@ -1,0 +1,177 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 10vh;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+  position: relative; /* Necesario para que los elementos dentro de la card se posicionen correctamente */
+}
+
+.card-image {
+  width: 100%;
+  height: 200px; /* Ajusta según el tamaño deseado para la imagen */
+  position: absolute; /* Coloca la imagen por debajo del contenido */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Asegura que la imagen quede debajo del contenido */
+}
+
+
+.card-image img {
+  width: 100%;
+  height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área sin perder la proporción */
+}
+
+.container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  background: transparent; /* Fondo transparente */
+}
+
+.container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: .4s;
+  background: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente en la cara */
+}
+
+.container .card .face.face1 {
+  position: relative;
+  background: rgb(51, 51, 51); /* Fondo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+  transform: translateY(0);
+  box-shadow:
+    inset 0 0 60px rgba(255, 255, 255, 0.5),
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+}
+
+.container .card .face.face1 .content {
+  opacity: .2;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content i {
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+}
+
+.container .card .face.face1 .content h1 {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.2); 
+}
+
+.container .card .face.face1 .content a {
+  transition: .5s;
+}
+
+.container .card .face.face2 {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+/* Letras de la cara 2 con efecto de luz de estrellas, más pequeñas */
+.container .card .face.face2 .content p {
+  font-size: 0.98em;
+  color: #1e3c72;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-shadow:
+    0 0 4px #b3c6ff,
+    0 0 8px #fff,
+    0 0 12px #7ecfff;
+  animation: star-glow 2.5s infinite alternate;
+}
+
+@keyframes star-glow {
+  0% {
+    text-shadow:
+      0 0 4px #b3c6ff,
+      0 0 8px #fff,
+      0 0 12px #7ecfff;
+  }
+  100% {
+    text-shadow:
+      0 0 8px #fff,
+      0 0 12px #b3c6ff,
+      0 0 16px #7ecfff;
+  }
+}
+
+/* Botones de la cara 2 con gradiente blanco a azul y brillo sutil */
+.container .card .face.face2 .content button {
+  background: linear-gradient(90deg, #fff 0%, #b3c6ff 60%, #1e3c72 100%);
+  color: #1e3c72;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-weight: bold;
+  margin: 8px 6px 0 0;
+  box-shadow: 0 0 8px #b3c6ff, 0 0 4px #fff;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .card .face.face2 .content button.btn-danger {
+  background: linear-gradient(90deg, #fff 0%, #ffb3b3 60%, #d7263d 100%);
+  color: #a8182e;
+  box-shadow: 0 0 8px #ffb3b3, 0 0 4px #fff;
+}
+
+.container .card .face.face2 .content button.btn-primary:hover,
+.container .card .face.face2 .content button.btn-rounded:hover {
+  background: linear-gradient(90deg, #e6f0ff 0%, #7ecfff 60%, #1e3c72 100%);
+  color: #0a1a33;
+  box-shadow: 0 0 12px #7ecfff, 0 0 8px #fff;
+}
+
+.container .card .face.face2 .content button.btn-danger:hover {
+  background: linear-gradient(90deg, #fff 0%, #ffd6d6 60%, #d7263d 100%);
+  color: #a8182e;
+  box-shadow: 0 0 12px #ffd6d6, 0 0 8px #fff;
+}
